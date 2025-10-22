@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function topla(a,b){ //Toplama
+            return(a+b);
+        }
+        function carp(a,b){ //Çarpma
+            return(a*b);
+        }
+        function cikar(a,b){//Çıkarma
+            return(a-b);
+        }
+        function bol(a,b){ //Bölme
+            if(b!=0){
+                return(a/b);
+            }else if (b==0) return("Sıfıra bölünemez");
+        }
+        function us(a,b){ //Üs alma, a üzeri b
+            return(a**b);
+        }
+        x = parseFloat(prompt("1.sayıyı giriniz:"));
+        y = parseFloat(prompt("2.sayıyı giriniz:"));
+        sonuc= "Toplam:"+topla(x,y)+"\n"+
+                "Çarpım:"+carp(x,y)+"\n"+
+                "Bölüm:"+bol(x,y)+"\n"+
+                "Çıkarım:"+cikar(x,y)+"\n"+
+                "Üs Alma:"+us(x,y);
+        alert(sonuc);
+    </script>
+    
+</body>
+</html>

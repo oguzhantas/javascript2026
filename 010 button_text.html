@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Text Kullanımı</title>
+    
+</head>
+<body>
+    <label for="maas">Yaşınız:</label>
+    <input type="text" id="txtyas" >
+    <button onclick="hesapla()">Hesapla</button>
+
+    <script>
+        function hesapla(){  
+            girilenYas=parseInt(document.getElementById("txtyas").value);
+            alert("Yaşınız: "+girilenYas);
+
+            if(girilenYas<15)
+                alert("Çocuk")
+            else if(girilenYas>=15 && girilenYas<30)
+                alert("Genç");
+            else if(girilenYas>=30 && girilenYas<70)
+                alert("Orta yaşlı");
+            else if(girilenYas>=70)
+                alert("Yaşlı");    
+        }
+    </script>
+</body>
+</html>

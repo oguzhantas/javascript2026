@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            sayi = Math.round((Math.random()*100)+1);
+            document.write(sayi);
+            let hak=0;
+            while(true){
+                    girilen=parseInt(prompt("Bir sayı giriniz:"));
+                    if(girilen==sayi){
+                        alert("Tebrikler"); break;
+                    } else if(girilen>sayi){
+                        alert("Lütfen daha küçük sayı giriniz"); 
+                        hak++;
+                    }else if(girilen<sayi){
+                        alert("Lütfen daha büyük sayı giriniz");
+                        hak++;
+                    }
+                    if(hak<=5){
+                        let kalan=5-hak;
+                        if(kalan==0){ 
+                            alert("Üretilen Sayı :"+sayi); break;
+                        }
+                        else 
+                            alert(kalan+" hakkınız kaldı");
+                    }
+            }
+    </script>
+</body>
+</html>

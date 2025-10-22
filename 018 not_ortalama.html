@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- %25 Vize, %15 Proje, %10 Ödev, %50 Final    -->
+    <h3>Ortalama Hesaplama</h3>
+    <label for="txtvize">Vize(%25)</label><br>
+    <input type="text"  id="txtvize"> <br>
+    
+    <label for="txtproje">Proje(%15)</label><br>
+    <input type="text"  id="txtproje"> <br>
+
+    <label for="txtodev">Ödev(%10)</label><br>
+    <input type="text"  id="txtodev"> <br>
+
+    <label for="txtfinal">Final(%50)</label><br>
+    <input type="text"  id="txtfinal"> <br> 
+
+    <label for="ortalama">Ortalama</label><br>
+    <input type="text"  id="txtortalama"> <br><br>
+    <button onclick="hesapla()">Hesapla</button>
+
+    <script>
+        function hesapla(){
+            vize = parseFloat(document.getElementById("txtvize").value);   // %25
+            proje = parseFloat(document.getElementById("txtproje").value); // %15
+            odev = parseFloat(document.getElementById("txtodev").value);   // %10
+            final = parseFloat(document.getElementById("txtfinal").value); // %50
+            // %25 Vize, %15 Proje, %10 Ödev, %50 Final  
+            ortalama= vize*0.25+proje*0.15+odev*0.10+final*0.50;
+            document.getElementById("txtortalama").value=ortalama;
+
+        }
+    </script>
+</body>
+</html>

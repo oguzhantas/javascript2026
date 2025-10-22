@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aralık Toplam</title>
+</head>
+<body>
+    <script>
+        baslangic = parseInt(prompt("Başlangıç sayısını giriniz:"));
+        bitis = parseInt(prompt("Bitiş sayısını giriniz:"));
+
+        //alert(baslangic+"-"+bitis+" Arası toplam hesaplanıyor...");
+        
+        let toplam=0;
+        for(i=baslangic;i<=bitis;i++){
+            toplam+=i;
+        }
+        alert("Toplam sonucu:"+toplam);
+        
+    </script>
+    
+</body>
+</html>

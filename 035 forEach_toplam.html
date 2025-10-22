@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let toplam=0;
+        let sayilar=[20,10,30,40,50];
+        sayilar.forEach(benimFonk);
+        alert("Toplam:"+toplam);
+        
+        function benimFonk(eleman,index, dizi){
+            toplam+=eleman; 
+            document.write("Toplam:"+toplam+"<br>");
+        }
+  
+        
+    </script>
+</body>
+</html>

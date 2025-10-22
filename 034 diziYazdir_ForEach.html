@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let sayilar=[20,10,30,45,25];
+        sayilar.forEach(benimFonk);
+
+
+        function benimFonk(eleman,index, dizi){
+            dizi[index]=eleman*10;
+        }
+
+        document.write(sayilar+"<br>");
+        sayilar= sayilar.sort(); //Küçükten büyüğe sıralar
+        document.write(sayilar+"<br>"); 
+        sayilar= sayilar.reverse(); //Ters çevirir
+        document.write(sayilar+"<br>");
+    </script>
+</body>
+</html>

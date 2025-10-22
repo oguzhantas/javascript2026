@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aralık Toplam</title>
+</head>
+<body>
+    <script>
+        function topla(){
+                s1=parseInt( document.getElementById("sayi1").value);
+                s2=parseInt( document.getElementById("sayi2").value);
+
+                let toplam=0;
+                for(i=s1;i<=s2;i++){
+                    toplam+=i;
+                }
+
+                alert("Toplam:"+toplam);
+        }
+    </script>
+    <label for="sayi1">Başlangıç</label>
+    <input type="text"  id="sayi1"> <br>
+
+    <label for="sayi2">Bitiş</label>
+    <input type="text"  id="sayi2"> <br>
+
+    <button onclick="topla()">Topla</button>
+
+</body>
+</html>

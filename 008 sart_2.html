@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Şart</title>
+</head>
+<body>
+    <script>
+        let satis =parseFloat(prompt("Satış miktarını giriniz:"));
+        let prim=0;
+
+        if(satis<10000)
+            prim=0;
+        else if(satis>=10000 && satis<20000)
+            prim=2500;
+        else if(satis>=20000)
+            prim=5000;
+        
+        alert("Kazandığınız prim:"+prim);
+    </script>
+</body>
+</html>

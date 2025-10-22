@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Switch Case Kullanımı</title>
+</head>
+<body>
+    <script>
+        let takim= prompt("Takımınızı giriniz(FB, GS, BJK):");
+
+        switch(takim){
+            case "FB":
+            case "fb": alert("Sarı Lacivert"); break;
+
+            case "GS": 
+            case "gs": alert("Sarı kırmızı"); break;
+
+            case "bjk":
+            case "BJK":  alert("Siyah Beyaz"); break;
+            default: alert("Lütfen GS, FB, BJK giriniz"); break;
+        }
+
+        /*
+            if(takim=="FB" || takim=="fb")
+                alert("Sarı lacivert");
+            else if(takim=="GS" || takim=="gs")
+                alert("Sarı kırmızı");
+            else if(takim=="BJK" || takim=="bjk")
+                alert("Siyah Beyaz")
+            else
+                 alert("Lütfen GS, FB, BJK giriniz");
+     */
+
+    </script>
+</body>
+</html>
