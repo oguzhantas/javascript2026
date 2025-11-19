@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        f1= parseFloat(prompt("Fiyat1 giriniz:"));
+        f2= parseFloat(prompt("Fiyat2 giriniz:"));
+        f3= parseFloat(prompt("Fiyat3 giriniz:"));
+        f4= parseFloat(prompt("Fiyat4 giriniz:"));
+        
+        ort=(f1+f2+f3+f4)/4;
+        alert("Ortalama:"+ort);
+     
+        if(ort>0 && ort<20)
+            alert("Ucuz");
+        else if(ort>=20 && ort<30)
+            alert("Normal");
+        else if(ort>=30 && ort<=40)
+            alert("Pahalı");
+         else if(ort>=40 && ort<=100)
+            alert("Aşırı Pahalı");
+
+    </script>
+</body>
+</html>

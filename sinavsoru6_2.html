@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaş ortalama</title>
+</head>
+<body>
+    <script>
+        y1= parseFloat(prompt("1. kişinin yaşı:"));
+        y2= parseFloat(prompt("2. kişinin yaşı:"));
+        y3= parseFloat(prompt("3. kişinin yaşı:"));
+        y4= parseFloat(prompt("4. kişinin yaşı:"));
+
+        ort=(y1+y2+y3+y4)/4;
+        alert("Ortalama:"+ort)
+
+        if (ort>=0 && ort<15)
+            alert("Çocuk");
+        else if(ort>15 && ort<25)
+            alert("Genç");
+        else if(ort>=25 && ort<60)
+            alert("Orta yaşlı");
+        else if(ort>=60 && ort<=100)
+            alert("Yaşlı");
+    </script>
+    
+</body>
+</html>

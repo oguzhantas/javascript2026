@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mouse Olayları</title>
+<script>
+    function semsiye_ac(){
+        document.getElementById("semsiye").src="images/semsiye_acik.PNG";
+    }
+
+    function semsiye_kapali(){
+         document.getElementById("semsiye").src="images/semsiye_kapali.PNG";
+    }
+</script>
+</head>
+<body>
+    <img src="images/semsiye_kapali.PNG" id="semsiye"
+    onmousedown="semsiye_kapali()" 
+    onmouseup="semsiye_ac()">
+<!-- onmousedown : fare tuşuna bastığınızda 
+    onmouseup: fare tuşundan parmağınızı çektiğinizde
+-->
+</body>
+</html>

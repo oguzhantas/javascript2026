@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnKeyUp</title>
+    <style>
+        #kare{ width: 100px; height: 30px; background-color: aqua;   }
+         #kup{width: 100px; height: 30px; background-color: yellow; }  
+        #karekok{width: 100px; height: 30px; background-color: rgb(241, 129, 0); }     
+    </style>
+</head>
+<body>
+    Sayı giriniz: <input type="text" id="sayi" onkeyup="hesapla()">
+    <div id="kare"></div>
+    <div id="kup"></div>
+    <div id="karekok"></div>
+    <script>
+        function hesapla(){
+           n=  parseFloat(document.getElementById("sayi").value);
+           //alert(n);
+           nkare= n*n;
+           nkup=n*n*n;
+           nkarekok=Math.sqrt(n);
+            document.getElementById("kare").innerHTML= nkare +" karesi";
+            document.getElementById("kup").innerHTML= nkup +" küpü";
+            document.getElementById("karekok").innerHTML= nkarekok +" karekökü";
+        }
+    </script>
+</body>
+</html>
