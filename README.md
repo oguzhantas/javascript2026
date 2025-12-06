@@ -1,8 +1,15 @@
 JavaScript
 ====================
+- JavaScript nedir, nerelerde kullanılır?
+- JavaScript kodlarını HTML içinde yazma
 - Değişken Tanımlama
 - İşlem Önceliği
 - Tip Çevirme (parseInt, parseFloat)
+- Alert ile Mesaj verme
+- Prompt ile klavyeden bilgi alma
+- Text nesnesinden bilgi alma ve yazma
+- Textarea nesnesinden bilgi alma ve yazma
+- Div içine bilgi yazma, bilgi okuma
 - Şart Yapıları (if, switch)
 - Döngüler (for, while, do-while, foreach)
 - Sonsuz Döngüler
