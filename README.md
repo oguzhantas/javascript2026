@@ -23,3 +23,5 @@ JavaScript
 - Rastgele Sayı Üretme (Math.Random)
 - Interval Kullanımı ile Zamanlama
 - Arrow Fonksiyonları
+
+![Interval Kullanımı]()
