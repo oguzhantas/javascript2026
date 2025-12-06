@@ -24,4 +24,12 @@ JavaScript
 - Interval Kullanımı ile Zamanlama
 - Arrow Fonksiyonları
 
-![Interval Kullanımı]()
+![JavaScript ile Interval Kullanımı](https://github.com/oguzhantas/javascript2026/blob/main/images/interval_kullanimi.PNG)
+
+KAYNAKLAR
+
+- Kod Yazmak için Sublime https://www.sublimetext.com/
+- Kod Yazmak içn Editor https://www.jetbrains.com/webstorm/
+- Kod Yazmak için Online Editörler https://jsfiddle.net/
+
+- Oğuzhan TAŞ JavaScript Eğitimi https://www.oguzhantas.com/javascript-egitimi/
