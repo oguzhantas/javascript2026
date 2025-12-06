@@ -24,7 +24,7 @@ JavaScript
 - Interval Kullanımı ile Zamanlama
 - Arrow Fonksiyonları
 
-![JavaScript ile Interval Kullanımı](https://github.com/oguzhantas/javascript2026/blob/main/images/interval_kullanimi.PNG)
+![JavaScript ile Interval Kullanımı](https://github.com/oguzhantas/javascript2026/blob/main/images/interval_kullanimi.gif)
 
 KAYNAKLAR
 
