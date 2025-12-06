@@ -26,6 +26,8 @@ JavaScript
 
 ![JavaScript ile Interval Kullanımı](https://github.com/oguzhantas/javascript2026/blob/main/images/interval_kullanimi.gif)
 
+![JavaScript ile Sıfırdan Slayt Oluşturma](https://github.com/oguzhantas/javascript2026/blob/main/images/slayt_olusturma.gif)
+
 KAYNAKLAR
 
 - Kod Yazmak için Sublime https://www.sublimetext.com/
