@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slayt </title>
+    <style>
+        .container{
+            margin: 0 auto;
+            max-height: 620px;
+            max-width: 520px;
+            background-color: #000;
+        }
+        #slayt{
+            
+            border:10px solid #000;
+            text-align: center;
+            margin-bottom:5px;
+        } 
+        #sayac{
+            padding: 10px;
+            background-color: red;
+            color:#FFF;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        dizi=['resim1.jpg','resim2.jpg','resim3.jpg','resim4.jpg','resim5.jpg'];
+        i=1;
+        setInterval(() => {
+            if(i>4) i=0;
+            document.getElementById("slayt").src="images/"+dizi[i];
+            document.getElementById("sayac").innerHTML=(i+1);
+             i++;
+        }, 1000); // 1000 milisaniye = 1 saniye
+
+    </script>
+   
+    <div class="container">
+            <img src="images/resim1.jpg" id="slayt" width="500"> <br>
+            <span id="sayac"></span>
+    </div>
+
+
+</body>
+</html>

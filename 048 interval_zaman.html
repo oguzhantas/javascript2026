@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman Göster</title>
+</head>
+<body>
+    <script>
+        function zamanyaz(){
+            let date = new Date;
+             saat= date.getHours(); 
+             dakika=date.getMinutes();
+             saniye= date.getSeconds();
+            zaman=saat+":"+dakika+":"+saniye;
+            document.getElementById("zamandiv").innerHTML=zaman;
+        }
+         
+        setInterval(() => {
+            zamanyaz();
+        }, 1000); // 1000 milisaniye = 1 saniye
+    </script>  
+    <div id="zamandiv"></div>
+</body>
+</html>

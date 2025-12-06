@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İngilizce Kelime Öğren</title>
+    <style>
+        #container{
+            margin:0 auto; /* Ortalama */
+            width: 500px; /* Genişlik*/
+            height:350px; /* Yükseklik*/
+            background-color: rgb(172, 171, 171);
+            padding: 20px; 
+            border-radius: 10px;
+        }
+        #kelimeler{
+            width: 400px; /* genişlik*/
+            height: 100px; /* yükseklik */
+            background-color: tomato; /* arka zemin rengi*/
+            color:#FFF; /* yazı rengi */
+            text-align: center; /* yazıyı yatayda ortala */
+            line-height: 100px; /* yazıyı dikeyde ortala */
+            margin:0 auto;/* kutuyu sayfaya ortala*/
+            font-size: 30px;/* yazı büyüklüğü*/
+            font-family: Verdana; /* yazı tipi*/
+            box-shadow: 10px 10px #555454; /* kutu gölgesi*/
+            text-shadow: 2px 2px #000;/* yazı gölgesi*/
+            border-radius: 10px; /* kutu köşeleri yuvarlat */
+            margin-bottom: 20px;
+       
+        }
+        #hayvan{
+            margin:0 auto;
+            text-align: center;
+        
+        }
+        #hayvanresim{
+            margin-top:70px;
+            text-align: center;
+            margin:0 auto;
+            border:10px solid tomato;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+      
+        //en=['dog','cat','bird','ant','bear','bee','wolf','cow','pig','horse','donkey','lion','tiger','turtles','fox','elephant','parrot'];
+        //tr=['köpek','kedi','kuş','karınca','ayı','arı','kurt','inek','domuz','at','eşek','aslan','kaplan','kablumbağa','tilki','fil','papağan'];
+        en=['dog','lion','tiger','horse'];
+        tr=['köpek','aslan','kaplan','at'];
+        hresim=['kopek.png','aslan.png','kaplan.png','at.png'];
+          i=0;
+          uzunluk=en.length; /*4*/
+        
+        setInterval(() => {
+            if(i>(uzunluk-1)) i=0;
+            document.getElementById("kelimeler").innerText=en[i]+"="+tr[i];
+            document.getElementById("hayvanresim").src="images/"+hresim[i];
+            i++;
+        }, 2000); // 1000 milisaniye = 1 saniye  
+    </script>
+<!-- HTML KODLAr-->
+<div id="container">
+    <div id="kelimeler"></div>
+    <div id="hayvan">
+        <img src="images/kopek.png" id="hayvanresim" width="150">
+    </div>
+    <div id="sayac"></div>
+
+</div>
+  
+</body>
+</html>

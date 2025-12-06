@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TR Çevir</title>
+    <style>
+        #harfsay{width: 100px; height: 30px; background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    
+    Kelime giriniz <br>
+    <input type="text" id="txtkelime" onkeyup="cevir()"> <br>
+    <input type="text" id="txtcevrilen">
+    <div id="harfsay"></div>
+    <script>
+        function cevir(){
+            var key = (window.Event) ? event.which : event.keyCode;
+            if (key!=8){
+                
+                //harf s
+                kelime= document.getElementById("txtkelime").value;
+                harfsayisi=kelime.length;
+                document.getElementById("harfsay").innerHTML = harfsayisi;
+                harf= kelime.substr(kelime.length-1,1);
+                //alert(harf);
+                if(harf=="ç") document.getElementById("txtcevrilen").value+="c";
+                else if(harf=="ş") document.getElementById("txtcevrilen").value+="s";
+                else if(harf=="ö") document.getElementById("txtcevrilen").value+="o";
+                else if(harf=="ü") document.getElementById("txtcevrilen").value+="u";
+                else if(harf=="ı") document.getElementById("txtcevrilen").value+="i";
+                else if(harf=="ğ") document.getElementById("txtcevrilen").value+="g";
+                else document.getElementById("txtcevrilen").value+=harf;
+            }else{
+                cevrilen= document.getElementById("txtcevrilen").value;
+                yeni= cevrilen.substr(0,cevrilen.length-1);
+                document.getElementById("txtcevrilen").value= yeni;
+                // Harf sayma
+                harfsayisi= document.getElementById("txtkelime").value.length;
+                document.getElementById("harfsay").innerHTML = harfsayisi;
+            }
+               
+        }
+      
+    </script>
+
+</body>
+</html>

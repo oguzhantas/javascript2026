@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geri Sayma</title>
+</head>
+<body onload="sesCal()">
+     <audio id="benimAlarm">
+        <source src="media/alarm.mp3" type="audio/mpeg">
+        Tarayıcınız desteklemiyor.
+      </audio>
+
+
+    <script>
+        dakika=59;
+        saat=1;
+        let x=document.getElementById("benimAlarm");
+        function sesCal(){
+            console.log('ses çal');
+            x.play();     
+        }  
+
+        function sesDurdur(){
+            console.log('ses duruyor');
+            x.pause();
+        }
+        function geriSay(){
+            if(dakika<=0 && saat<=0)
+            {
+                clearInterval(ID);
+                saat=0; dakika=0;
+                console.log("Dakika ve saniye sıfır");
+                document.getElementById('zamandiv').innerHTML="Süre bitti";
+                sesCal();
+            }
+            document.getElementById('zamandiv').innerHTML=saat+":"+dakika;
+            dakika--;
+            if(dakika<0){
+                dakika=59;
+                saat--;
+            }
+            
+        }
+       
+       ID= setInterval(geriSay,200);
+       
+    </script>
+    <div id="zamandiv"></div>
+  
+</body>
+</html>

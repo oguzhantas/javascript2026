@@ -9,6 +9,7 @@
             width: 100px;
             height: 100px;
             background-color: tomato;
+            cursor: pointer;
         }
         #mesaj{
             margin-top: 20px;
@@ -21,22 +22,16 @@
 </head>
 <body>
     
-
-
-
-    
-    <div id="kutu" onmousemove="fareHareket()" 
-    onmouseleave="fareAyril()"></div>
+    <div id="kutu" onmousemove="fareHareket()" onmouseleave="fareAyril()"></div>
     <div id="mesaj"></div>
-    <script>
+
+<script>
         function fareHareket(){
             //alert('fare üzerine geldi');
-            document.getElementById("mesaj").innerHTML=
-            "Fare üzerine geldi";
+            document.getElementById("mesaj").innerHTML="Fare üzerine geldi";
         }
         function fareAyril(){
-             document.getElementById("mesaj").innerHTML=
-             "Fare ayrıldı";
+             document.getElementById("mesaj").innerHTML="Fare ayrıldı";
         }
     </script>
 </body>

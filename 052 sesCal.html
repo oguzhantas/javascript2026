@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio id="benimAlarm">
+  <source src="media/alarm.mp3" type="audio/mp3">
+  Tarayıcınız desteklemiyor.
+</audio>
+
+<button onclick="sesCal()">Ses Çal</button>
+<script>
+    function sesCal(){
+        console.log("Ses çal fonksiyonu çağrıldı...");
+        let x=document.getElementById("benimAlarm");
+        x.play();     
+    }
+   
+    
+</script>
+
+</body>
+</html>

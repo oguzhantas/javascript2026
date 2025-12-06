@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman Göster</title>
+    <style>
+        #geridiv{
+            height:50px;
+            width: 50px;
+            text-align: center;
+            font-size:40px; font-family: Tahoma;
+            border:10px solid rgb(24, 157, 197);
+            color:white;background-color: blue;
+            padding:10px;line-height: 50px;  
+        }
+        #semsiye{ margin-left:10px; text-align: center;  }
+        .container{ margin:0 auto; width: 300px;}
+    </style>
+</head>
+<body>
+    <script>
+        let sayac=5;
+         setInterval(() => {
+            if(sayac<=0) {
+                sayac=0;
+                document.getElementById("semsiye").src="images/semsiye_acik.PNG";
+            }
+            document.getElementById("geridiv").innerHTML=sayac;
+            sayac--;            
+        }, 1000); // 1000 milisaniye = 1 saniye
+    </script>  
+    <div class="container">
+        <div id="geridiv"></div>
+        <img src="images/semsiye_kapali.PNG" id="semsiye">
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İngilizce Öğrenelim</title>
+    <style>
+        .kutu{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #FFF;
+            box-shadow: 5px 5px #363535;
+            text-align: center;
+            line-height: 100px; margin:10px; padding:10px;float:left;
+            font-family: Verdana;
+            font-weight: bold;
+        }
+
+        .sari{background-color: yellow;}
+        .kirmizi{background-color: red;}
+        .mavi{background-color:blue ;}
+        .yesil{background-color: green;}
+        .mor{background-color: purple;}
+        .pembe{background-color: pink;}
+        #kelime{
+                margin-left:300px;
+                width: 300px; 
+                height: 50px; 
+                border:2px solid rgb(49, 48, 48);
+                background-color: gray ;
+                color:#FFF; font-size: 30px;}
+    </style>
+
+
+</head>
+<body>
+        <div class="kutu sari"  onmousemove="yaz('k1')"> Sarı </div>
+        <div class="kutu yesil"  onmousemove="yaz('k2')"> Yeşil </div>
+        <div class="kutu mavi"  onmousemove="yaz('k3')"> Mavi </div>
+        <div class="kutu mor" onmousemove="yaz('k4')"> Mor </div>
+        <div class="kutu kirmizi"  onmousemove="yaz('k5')"> Kırmızı </div>
+        <div class="kutu pembe" onmousemove="yaz('k6')">Pembe</div>
+        <input type="text" id="kelime" readonly value="">
+
+    <script>
+        function yaz(deger){
+          if (deger=='k1') document.getElementById("kelime").value="Yellow";
+          else if (deger=='k2') document.getElementById("kelime").value="Green";
+          else if (deger=='k3') document.getElementById("kelime").value="Blue";
+          else if (deger=='k4') document.getElementById("kelime").value="Purple";
+          else if (deger=='k5') document.getElementById("kelime").value="Red";
+          else if (deger=='k6') document.getElementById("kelime").value="Pink";
+
+        }
+
+
+    </script>
+</body>
+</html>
