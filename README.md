@@ -37,3 +37,5 @@ KAYNAKLAR
 - Kod Yazmak için Online Editörler https://jsfiddle.net/
 
 - Oğuzhan TAŞ JavaScript Eğitimi https://www.oguzhantas.com/javascript-egitimi/
+
+Dr. Oğuzhan TAŞ  http://oguzhantas.github.io
