@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Soru 1</title>
+</head>
+<body>
+    <!--
+        1)	Prompt ile klavyeden  alınan üç sayıdan ikiye bölünenlerin toplamını bulunuz.
+    -->
+    <script>
+
+        let sayi1, sayi2, sayi3, toplam;
+      toplam=0;
+      sayi1=parseFloat(prompt("1. sayıyı giriniz:"));
+      sayi2=parseFloat(prompt("2. sayıyı giriniz:"));
+      sayi3=parseFloat(prompt("3. sayıyı giriniz:"));
+      
+     if (sayi1 % 2==0) toplam+=sayi1;
+     if (sayi2 % 2==0) toplam+=sayi2;
+     if (sayi3 %2 ==0) toplam+=sayi3;  
+     document.write("Toplam sonucu:"+toplam);
+
+    </script>
+</body>
+</html>

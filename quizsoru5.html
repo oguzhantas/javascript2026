@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        5)	Bir memur maaşı toplamı 
+        500 bini geçince %10 vergi, 
+        700 bini geçince %20 vergi, 
+        800 bini geçince %30 vergi  alınmaktadır. 
+        Buna göre girilen maaşa göre vergi miktarını bulunuz.
+    -->
+    <script>
+        let maas, vergi=0;
+        maas=parseFloat(prompt("Maaşınızı giriniz:"));
+        if(maas<500)
+            vergi=0;
+        else if(maas>=500 && maas<700)
+            vergi=maas*0.1; //vergi=maas*10/100;
+        else if(maas>=700 && maas<800)
+            vergi=maas*0.2; //vergi=maas*20/100
+        else if(maas>=800)
+            vergi=maas*0.3; //vergi=maas*30/100;
+        alert("Vergi:"+vergi);
+    </script>
+    </body>
+</html>

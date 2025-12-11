@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Soru3</title>
+</head>
+<body>
+    <!--
+        3)	1 ile 100 arasında 5’e bölünenler toplamını bulunuz.
+    -->
+    <script>
+        let toplam=0;
+        for(i=1;i<=100; i++){
+            if(i%5==0){
+                toplam+=i;
+                document.write(i+"<br>");
+            }
+        }
+
+        alert("Toplam değeri:"+toplam);
+    </script>
+</body>
+</html>

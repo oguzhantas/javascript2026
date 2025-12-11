@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        2)	Bir şirkette pazarlamacılara satış oranında prim ödenmektedir. 
+        10 bin ve altına prim yok, 
+        10 bin üstüne ve 20 bin altına %20 prim, 
+        20 bin ile 30 bin arasına %30 prim, 
+        30 bin üstüne %40 prim verilecektir. 
+        
+        Buna göre klavyeden girilen satışa göre ödenecek primi bulunuz?
+    -->
+    <script>
+        let satis=0, prim=0;
+        satis= parseFloat(prompt("Satış miktarını giriniz:"));
+        if (satis<10000){
+            prim=0;
+        }else if(satis>=10000 && satis<20000){
+            prim=satis*20/100; //prim=satis*0.2;
+        }else if(satis>=20000 && satis<30000){
+            prim = satis*30/100; //prim=satis*0.3;
+        }else if(satis>=30000){
+            prim=satis*40/100; //prim=satis*0.4;
+        }
+        alert("Prim değeri:"+prim);
+            
+    </script>
+    
+</body>
+</html>
