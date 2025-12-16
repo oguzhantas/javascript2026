@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+     <link rel="stylesheet" href="css/bootstrap.css">
+     <style>
+       .gecersiz{
+         border:2px solid red;
+       }
+       .gecerli{
+         border:2px solid green;
+       }
+     </style>
+  </head>
+<body>
+
+    <div class="container">
+        <div class="col-md-6">
+            <form action="#" method="POST">
+                <h3>Kullanıcı Girişi</h3>
+                Adı Soyadı:
+                <input type="text" class="form-control" name="adsoyad" id="adsoyad">
+                <br>
+                Telefon:
+                <input type="text" class="form-control" name="telefon" id="telefon">
+
+                İstek/Dilek/Şikayet:
+                <textarea name="istek" class="form-control" id="istek" rows="5">
+                </textarea>
+                <button class="btn btn-primary mt-2" onclick="kontrolEt()">
+                    Kaydet
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function kontrolEt(){
+            // trim sol ve sağ boşlukları atar
+            adsoyad= document.getElementById("adsoyad").value.trim();
+            telefon=document.getElementById("telefon").value.trim();
+            istekdeger=document.getElementById("istek").value.trim();
+          
+            let mesaj="";
+            if(adsoyad==""){
+                 mesaj="Lütfen ad soyad alanını";
+            }
+            if(telefon==""){
+                if(mesaj=="")
+                  mesaj="Lütfen telefon alanını";
+                else
+                  mesaj+=", telefon alanını ";
+            }
+            if(istekdeger==""){
+              
+                if(mesaj=="")
+                  mesaj="Lütfen istek/dilek/şikayet alanını";
+                else
+                  mesaj+=", istek/dilek/şikayet alanını ";
+            }
+
+            alert(mesaj+" doldurunuz");
+        }
+    </script>
+</body>
+</html>

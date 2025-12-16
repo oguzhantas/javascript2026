@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+     <link rel="stylesheet" href="css/bootstrap.css">
+
+     <style>
+        #hataDiv{
+            background-color: yellow;
+            margin: 10px 10px 10px 0px;
+            padding:10px;
+            color:#000;
+            border:2px solid yellowgreen;
+            border-radius: 10px;
+            box-shadow: 3px 3px #CCC;
+            font-size:15px;
+            display: none; /* Gizle*/
+            
+        }
+
+        #basariliDiv{
+            background-color: green;
+            margin: 10px 10px 10px 0px;
+            padding:10px;
+            color:#FFF;
+            border:2px solid yellowgreen;
+            border-radius: 10px;
+            box-shadow: 3px 3px #CCC;
+            font-size:15px;
+            display: none; /* Gizle*/
+            
+        }
+
+
+     </style>
+</head>
+<body>
+     <div class="container">
+        <div class="col-md-4">
+            <h3>İletişim</h3><hr>
+            <!-- hata olunca gösterilecek div-->
+            <div id="hataDiv"></div>
+            <div id="basariliDiv"></div>
+
+            Adı
+            <input type="text" class="form-control"  id="adi" required> 
+    
+            Soyadı
+            <input type="text" class="form-control" id="soyadi" required>
+
+            Telefon:
+            <input type="text" class="form-control" id="telefon">
+
+            E-posta:
+            <input type="email" class="form-control" id="eposta"> 
+
+            Başvuru tipi:
+            <select class="form-control" id="mesajtur">
+                <option value="0" selected>Lütfen seçiniz</option>
+                <option value="İtiraz">İtiraz</option>
+                <option value="Dilek">Dilek</option>
+                <option value="Şikayet">Şikayet</option>
+                <option value="Öneri">Öneri</option>
+                <option value="Teşekkür">Teşekkür</option>
+            </select>
+
+            Mesaj
+            <textarea class="form-control" id="mesaj" cols="30" rows="4">
+            </textarea>
+
+            <button onclick="kontrolEt()" class="btn btn-primary mt-3 w-100">
+                Formu Gönder
+            </button>
+        </div><!-- col-md-6  -->
+       
+     </div><!-- container bitiş -->
+    <script>
+        function kontrolEt(){
+            adi=document.getElementById('adi').value.trim();
+            soyadi=document.getElementById('soyadi').value.trim();
+            telefon=document.getElementById('telefon').value.trim();
+            eposta=document.getElementById('eposta').value.trim();
+            mesaj=document.getElementById('mesaj').value.trim();
+            mesajtur=document.getElementById('mesajtur').value.trim();
+            let hataMesaj="";
+            if(adi=="" || soyadi=="")
+                hataMesaj="Adı ve Soyadı alanlarını doldurunuz\n";
+
+           // if(!((telefon!='' && eposta=='')||(telefon=='' && eposta!='') ||(telefon!='' && eposta!='')))
+            //    hataMesaj+="Telefon veya e-posta alanlarından birini mutlaka doldurunuz \n";
+            if(telefon=='' && eposta=='')
+                hataMesaj+="Telefon veya e-posta alanlarından birini mutlaka doldurunuz \n";
+            if(mesaj=='')
+                hataMesaj+="Mesaj alanını doldurunuz\n"; 
+            if(mesajtur=="0")
+                hataMesaj+="Başvuru tipi seçiniz";   
+
+            if(hataMesaj!=""){
+                document.getElementById('basariliDiv').style.display='';
+                document.getElementById('hataDiv').style.display='block';
+                document.getElementById('hataDiv').innerText=hataMesaj;
+            }
+
+            else
+            {
+                document.getElementById('hataDiv').style.display='';
+                document.getElementById('basariliDiv').style.display='block';
+               document.getElementById('basariliDiv').innerText="Form başarılı şekilde kaydedildi.";
+            }
+               
+        }
+    </script>
+</body>
+</html>

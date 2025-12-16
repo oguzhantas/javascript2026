@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Girişi</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #hataDiv{
+            background-color: yellow;
+            color:#000;
+            padding:10px;
+            margin:10px 10px 10px 0px;
+            border:2px solid yellowgreen;
+            border-radius: 10px;
+            box-shadow: 5px 5px #CCC;
+            display: none;
+        }
+        #dogruDiv{
+            background-color: green;
+            color:#FFF;
+            padding:10px;
+            margin:10px 10px 10px 0px;
+            border:2px solid yellowgreen;
+            border-radius: 10px;
+            box-shadow: 5px 5px #CCC;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6">
+
+            <h3>Kullanıcı Girişi</h3>
+            Kullanıcı Adı:
+            <input type="text" class="form-control" id="kullanici" required><br>
+            Şifre:
+            <input type="password" class="form-control" id="sifre" required><br>
+            <button class="btn btn-primary" type="submit" onclick="kontrolEt()">Kullanıcı Girişi</button>
+
+            <div id="hataDiv"></div>
+            <div id="dogruDiv"></div>
+             
+        </div><!-- col-md-6 -->
+    </div><!-- container bitiş-->
+   
+<script>
+    function kontrolEt(){
+        k=document.getElementById('kullanici').value.trim();
+        s=document.getElementById('sifre').value.trim();
+        let hataMesaj="";
+        if(k=='' || s==''){
+            hataMesaj='UYARI:Kullanıcı Adı ve şifre giriniz. \n';
+            if(k.length<3)
+                hataMesaj+='Kullanıcı adını en az 3 karakter giriniz. \n';
+            if(s.length<5)
+                hataMesaj+='Şifre alanını en az 5 karakter giriniz. \n';  
+            //Hata mesajı boş değilse hataDiv'i göster yoksa gösterme
+            if(hataMesaj!=''){
+                document.getElementById('dogruDiv').style.display='';
+                document.getElementById('hataDiv').style.display='block'; //hataDiv i göster
+                document.getElementById('hataDiv').innerText=hataMesaj;
+            }  
+           
+        }else{
+            document.getElementById('hataDiv').style.display='';
+            document.getElementById('dogruDiv').style.display='block'; //hataDiv i göster
+            document.getElementById('dogruDiv').innerText='TAMAM, işlem başarılı.';
+
+        }
+    }
+</script>
+</body>
+</html>
