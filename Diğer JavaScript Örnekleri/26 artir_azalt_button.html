@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artır Azalt Butonu</title>
+    <style>
+        #birimFiyat{
+            float:left;
+            padding:5px;
+            background-color: orange;
+            color:white;
+            width: 50px;
+            height:15px;
+        }
+
+        #toplamFiyat{
+            float:left;
+            padding:5px;
+            background-color: green;
+            color:white;
+            width: 50px;
+            height:15px;
+        }
+
+        #label{
+            float:left;
+            padding:5px;
+            background-color: rgb(142, 145, 142);
+            color:white;
+            width: 100px;
+            height:15px;
+            margin-left:10px;
+            margin-right: 10px;
+        }
+    
+
+    </style>
+
+
+    <script>
+        function artir(){
+          aktifDeger=parseInt(document.getElementById("adet").value);
+          birimFiyat=parseFloat(document.getElementById("birimFiyat").innerHTML);
+          aktifDeger++;
+          toplam=aktifDeger*birimFiyat;
+          document.getElementById("adet").value=aktifDeger; 
+          document.getElementById("toplamFiyat").innerHTML=toplam; 
+
+        }
+
+        function azalt(){
+          aktifDeger=parseInt(document.getElementById("adet").value);
+          birimFiyat=parseFloat(document.getElementById("birimFiyat").innerHTML);
+          if(aktifDeger>1){
+            aktifDeger--;
+          }
+          toplam=aktifDeger*birimFiyat;
+          document.getElementById("adet").value=aktifDeger; 
+          document.getElementById("toplamFiyat").innerHTML=toplam; 
+        }
+
+    </script>
+</head>
+<body>
+        <div id="label">Adet:</div>
+        <button onclick="artir()">+</button>
+        <input type="text" size="1" id="adet" value="1">
+        <button onclick="azalt()">-</button>
+<br> <br>
+    <div id="label">Birim Fiyat:</div>
+    <div id="birimFiyat">100</div>
+<br> <br>
+    <div id="label">Toplam Fiyat:</div>
+    <div id="toplamFiyat">100</div>
+
+</body>
+</html>

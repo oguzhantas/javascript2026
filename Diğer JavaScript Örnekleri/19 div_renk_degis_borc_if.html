@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #deger{
+            width:300px;
+            height:50px;
+            padding:10px;
+            margin-top:10px;
+            color:white;
+        }
+    </style>
+    <script>
+
+        function calis(nesne){
+            x=nesne.value; //borç değerini alıyoruz
+            if(x<10000){
+                document.getElementById("deger").style.background='green';
+                document.getElementById("deger").innerHTML="Borç Normal";
+            }
+            else if(x>=10000 && x<20000){
+                document.getElementById("deger").style.background='blue';
+                document.getElementById("deger").innerHTML="Borç Biraz Fazla";
+            }
+               
+            else if(x>=20000 && x<30000){
+                document.getElementById("deger").style.background='orange';
+                document.getElementById("deger").innerHTML="Borç Kritik";
+            }
+                
+            else if(x>=30000 ) {
+                document.getElementById("deger").style.background='red';
+                document.getElementById("deger").innerHTML="Borç Çok fazla";
+            }
+               
+        }   
+
+    </script>
+</head>
+<body>
+
+    Borç giriniz:<input type="text" id="borc" value="0" onkeyup="calis(this)">
+    <div id="deger"></div>
+    
+</body>
+</html>

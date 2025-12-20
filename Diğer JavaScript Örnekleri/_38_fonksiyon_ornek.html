@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        function islem(soru,topla,cikar){
+
+            if (confirm(soru)) topla(5,3);
+            else cikar(5,3); 
+
+        }
+
+        function toplamaYap(s1,s2){
+            let toplam=s1+s2;
+            alert(toplam);
+        }
+
+        function cikarmaYap(s1,s2){
+            let cikarim=s1-s2;
+            alert(cikarim);
+        }
+
+        islem("Hangi işlemi yapalım Topla ise Tamam, Çıkar ise İptal",toplamaYap, cikarmaYap);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

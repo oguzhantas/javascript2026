@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hesapla(){
+
+            s1= parseFloat(document.getElementById("sayi1").value);
+            s2= parseFloat(document.getElementById("sayi2").value);
+            var toplam=0;
+            let i=s1;
+            while(i<=s2){
+                toplam+=i;
+                i++;
+            }
+            alert(toplam);
+
+        }
+    </script>
+</head>
+<body>
+      sayı 1:  <input type="text" id="sayi1">
+      sayı 2:  <input type="text" id="sayi2">
+      <button onclick="hesapla()">Hesapla</button>
+</body>
+</html>

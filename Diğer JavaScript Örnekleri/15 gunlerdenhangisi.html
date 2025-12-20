@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gunGoster(){
+            var tarih = new Date();
+            alert(tarih);
+            var gun = tarih.getDay(); //getDay() ile Gün değerini alıyoruz
+            var ay=tarih.getUTCMonth(); //getUTCMonth ile Ay değerini alıyoruz
+            var yil=tarih.getFullYear(); //getFullYear ile Yıl değerini alıyoruz
+            strgun=""; stray="";
+            switch(gun) {
+                case 0: strgun="Pazar";break;
+                case 1:strgun="Pazartesi";break;
+                case 2: strgun="Salı";break;
+                case 3: strgun="Çarşamba";break;
+                case 4:strgun="Perşembe";break;
+                case 5: strgun="Cuma"; break;
+                case 6: strgun="Cumartesi";
+            }
+            switch(ay){
+                case 0: stray="Ocak"; break;
+                case 1: stray="Şubat"; break;
+                case 2: stray="Mart";break;
+                case 3: stray="Nisan";break;
+                case 4: stray="Mayıs";break;
+                case 5: stray="Haziran";break;
+                case 6: stray="Temmuz";break;
+                case 7: stray="Ağustos";break;
+                case 8: stray="Eylül";break;
+                case 9: stray="Ekim";break;
+                case 10: stray="Kasım";break;
+                case 11: stray="Aralık";break;
+            }
+            ayingunu=tarih.getDate();
+            document.getElementById("tarihzaman").innerHTML=strgun+" "+ayingunu+" "+stray+" "+yil;
+}
+    </script>
+</head>
+<body onload="gunGoster()">
+        <div id="tarihzaman">
+
+        </div>
+</body>
+</html>

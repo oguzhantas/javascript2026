@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+      /*
+        Kargonun ağırlığına fiyat belirlenecektir.
+        * 0,1 ile 1000 gr (1000 dahil değil) arasında ise 10 TL,
+        * 1000 gr ile 2000(2000 dahil değil) arasında ise 20 TL,
+        * 2000 ile 3000(dahil değil) arasında ise 30 TL,
+        * 3000 gr ve yukarısı 40TL 'dir.
+       Buna girilen gram miktarına göre ödenecek kargo 
+       ücretini bulunuz.
+      */
+        agirlik=parseFloat(prompt("Ağırlık giriniz:"));
+       
+        var ucret=0;
+        if (agirlik>0.1 && agirlik<1000) //999.99 gr=1kg'a kadar ücret 10 TL
+            ucret=10;
+        else if(agirlik>=1000 && agirlik<2000)
+            ucret=20;
+        else if(agirlik>=2000 && agirlik<3000)
+            ucret=30;
+        else if(agirlik>=3000)
+            ucret=40;
+
+        alert("Ödenecek ücret:"+ucret);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

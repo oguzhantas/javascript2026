@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseMove Olayı </title>
+    <style>
+        #meyveler{ 
+            position: relative; 
+            width:200px;height: 200px; 
+            margin-bottom:10px; 
+        }
+        img{ width:200px;height:200px; 
+                position: absolute; 
+                left:0px; right: 0px; 
+        }
+    </style>
+    <script>  
+        function elmaGoster(){
+            document.getElementById("elma").style.zIndex=3;
+            document.getElementById("portakal").style.zIndex=2;
+            document.getElementById("seftali").style.zIndex=1;
+        }
+        function seftaliGoster(){
+            document.getElementById("elma").style.zIndex=2;
+            document.getElementById("portakal").style.zIndex=1;
+            document.getElementById("seftali").style.zIndex=3;
+        }
+        function portakalGoster(){
+            document.getElementById("elma").style.zIndex=1;
+            document.getElementById("portakal").style.zIndex=3;
+            document.getElementById("seftali").style.zIndex=2;
+        }
+    </script>
+</head>
+<body>
+<div id="meyveler">
+    <img src="images/elma.JPG" id="elma" >
+    <img src="images/portakal.JPG" id="portakal" >
+    <img src="images/seftali.JPG" id="seftali" >
+</div>
+    <button onmousemove="elmaGoster()">Apple</button>
+    <button onmousemove="portakalGoster()">Orange</button>
+    <button onmousemove="seftaliGoster()">Peach</button>
+</body>
+</html>

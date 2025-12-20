@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 İşlem</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+            function topla(){
+                 sayi1=parseFloat(document.getElementById("s1").value);
+                 sayi2=parseFloat(document.getElementById("s2").value);
+                // console.log("1.Sayı:"+sayi1);
+                // console.log("2.Sayı:"+sayi2);
+                toplam=sayi1+sayi2;
+                document.getElementById("sonuc").innerHTML+="Toplam sonucu: "+toplam+"<br>";
+            }
+
+            function cikar(){
+                 sayi1=parseFloat(document.getElementById("s1").value);
+                 sayi2=parseFloat(document.getElementById("s2").value); 
+                cikarim=sayi1-sayi2;
+                document.getElementById("sonuc").innerHTML+="Çıkarım sonucu: "+cikarim+"<br>";
+            }
+
+            function bol(){
+                 sayi1=parseFloat(document.getElementById("s1").value);
+                 sayi2=parseFloat(document.getElementById("s2").value);
+                 if(sayi2!=0) 
+                    bolum=sayi1/sayi2;
+                else
+                    bolum="Tanımsız";
+                document.getElementById("sonuc").innerHTML+="Bölüm sonucu: "+bolum+"<br>";
+            }
+
+            function carp(){
+                 sayi1=parseFloat(document.getElementById("s1").value);
+                 sayi2=parseFloat(document.getElementById("s2").value); 
+                carpim=sayi1*sayi2;
+                document.getElementById("sonuc").innerHTML+="Çarpım sonucu: "+carpim+"<br>";
+            }
+
+            function temizle(){
+                document.getElementById("s1").value="";
+                document.getElementById("s2").value="";
+                document.getElementById("sonuc").innerHTML="";
+            }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-4">
+            <label for="s1">Sayı 1:</label>
+            <input type="text" class="form-control" id="s1">
+
+            <label for="s2">Sayı 2:</label>
+            <input type="text" class="form-control" id="s2">
+            <div class="mt-3">
+                <button class="btn btn-primary" onclick="topla()">+</button>
+                <button class="btn btn-primary" onclick="cikar()">-</button>
+                <button class="btn btn-primary" onclick="bol()">/</button>
+                <button class="btn btn-primary" onclick="carp()">*</button>
+                <button class="btn btn-primary" onclick="temizle()">Temizle</button>
+            </div>
+            <div class="alert alert-info mt-3" id="sonuc">
+                <!-- Buraya bilgi yazılacak-->
+            </div>
+            
+
+        </div><!-- col-md-4 -->
+
+    </div><!-- container-->
+  
+    
+
+</body>
+</html>

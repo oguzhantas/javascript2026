@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diziler</title>
+</head>
+<body>
+
+
+    <script>
+        //Tam sayı dizisi oluşturup sıralama
+        dizi=[20,12,22,50,40,38,10];
+        dizi.sort();
+        for (i=0;i<dizi.length;i++)
+        {
+            document.write(dizi[i]+"<br>");
+        }
+
+        //Metinsel bir dizi oluşturup sıralayalım
+        markalar=["asus","apple","samsung","xaomi","lenovo","acer"];
+        markalar.sort(); 
+        for (i=0;i<markalar.length;i++)
+        {
+            document.write(markalar[i]+"<br>");
+        }
+        //Türkçe karakterde sort fonksiyonu iyi sonuç vermez
+        isimler=["şeyda","ceyda","serra","funda"];
+        isimler.sort();
+        for (i=0;i<isimler.length;i++)
+        {
+            document.write(isimler[i]+"<br>");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div renk</title>
+    <style>
+        #kutu1{
+            width: 100px; /*Kutu genişlik*/
+            height: 100px; /*Kutu yükseklik*/
+            float:left; /*Sola hizala*/
+            background-color: blue; /*Zemin rengi mavi*/
+            margin:10px;  /* Dış boşluk*/
+            padding:10px; /* İç boşluk*/
+            color:#FFF; /*Yazı rengi*/
+        }
+    </style>
+    <script>
+        function renkKirmiziDegistir(){
+            document.getElementById('kutu1').style.background='red';
+        }
+        function renkSariDegistir(){
+            document.getElementById('kutu1').style.background='yellow';
+        }
+    </script>
+</head>
+<body>
+    <div id="kutu1">Kutu</div>
+   
+    <button onclick="renkKirmiziDegistir()">Kırmızı Renge Dönüştür</button>
+    <button onclick="renkSariDegistir()">Sarı Renge Dönüştür</button>
+</body>
+</html>

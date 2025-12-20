@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizi</title>
+    <script>
+        //JavaScript ile dizi oluşturma
+        meyveler=["elma","armut","çilek","kivi"];
+
+        document.write("1. eleman:"+meyveler[0]+"<br>");
+        document.write("2. eleman:"+meyveler[1]+"<br>");
+        document.write("3. eleman:"+meyveler[2]+"<br>");
+        document.write("4. eleman:"+meyveler[3]+"<br>");
+
+        //Dizi uzunluğunu bulmak için length kullanıyoruz
+        document.write("Dizi uzunluğu:"+meyveler.length+"<br>");
+        //Yeni eleman ekleme için push metodu kullanıyoruz
+        meyveler.push("ananas");
+        document.write("Dizi uzunluğu:"+meyveler.length+"<br>");
+        document.write("5. eleman:"+meyveler[4]+"<br>");
+        //Diziden son elemanı silme
+        meyveler.pop();
+        document.write("Dizi uzunluğu:"+meyveler.length+"<br>");
+        //Birden fazla eleman ekleme
+        meyveler.unshift("Limon","Ejder meyvesi");
+        document.write("Dizi uzunluğu:"+meyveler.length+"<br>");
+        // Tüm elemanları yazdırma
+        document.write("=== Tüm dizi elemanları ===<br>");
+        //Dizi elemanları sıfırdan başlar
+        for(let i=0;i<meyveler.length;i++){
+            document.write(meyveler[i]+"<br>");
+        }
+
+        //Bir dizideki elemanı bulmak için indexOf kullanılır.
+        sonuc= meyveler.indexOf("armut");
+        if(sonuc!=-1){
+            document.write("Eleman var, bulundu<br>");
+            document.write("Sıra numarası(indisi):"+sonuc);
+        }else{
+            document.write("Eleman bulunamadı")
+        }
+       
+        sonuc= meyveler.indexOf("muz");
+        if(sonuc!=-1){
+            document.write("Eleman var, bulundu<br>");
+            document.write("Sıra numarası(indisi):"+sonuc);
+        }else{
+            document.write("Eleman bulunamadı")
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

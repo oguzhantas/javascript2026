@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div renk</title>
+    <style>
+        .kutu{
+            width: 100px;
+            height: 100px;
+            float:left;
+            background-color:magenta;
+            margin:10px;
+            padding:10px;
+            color:#FFF;
+        }
+    </style>
+        <script>
+            function renkDegistir(){
+              kutular= document.getElementsByClassName('kutu');     
+              for(var i=0;i<kutular.length; i++){
+                kutular[i].style.background="blue";        
+                document.getElementById("kutu"+(i+1)).innerHTML=i+1;
+            }//for
+        }//function
+    
+        </script>
+    
+</head>
+<body>
+          <div class="kutu" id="kutu1">Kutu1</div>
+          <div class="kutu" id="kutu2">Kutu2</div>
+          <div class="kutu" id="kutu3">Kutu3</div>
+  
+
+  
+    
+   
+    <button onclick="renkDegistir()">Renk Değiştir</button>
+
+</body>
+</html>

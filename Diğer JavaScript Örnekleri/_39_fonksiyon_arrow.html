@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function topla1(s1,s2){
+            sonuc=s1+s2;
+            return(sonuc);
+        }
+        //İkinci kullanim
+        let topla2=function(s1,s2){
+            sonuc=s1+s2;
+            return(sonuc);
+        }
+        //Üçüncü kullanım arrow fonksiyonu
+
+        let topla3 =(s1,s2) => s1+s2;
+
+        //Şimdi fonksiyonları çağıralım
+        sonuc1= topla1(3,5);
+        document.write("Sonuç1 :"+sonuc1);
+
+        sonuc2= topla2(4,5);
+        document.write("Sonuç2 :"+sonuc2);
+        
+        sonuc3= topla3(6,5);
+        document.write("Sonuç3 :"+sonuc3);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

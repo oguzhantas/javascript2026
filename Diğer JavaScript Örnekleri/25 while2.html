@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While2</title>
+    <script>
+
+        function say(){
+            basla=parseInt(document.getElementById("baslangic").value);
+            bitis=parseInt(document.getElementById("bitis").value);
+            i=basla;
+            while(i<=bitis){
+                document.write(i+"<br>");
+                i++;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    Başlangıç Sayısı:<input type="text" id="baslangic"> <br>
+    Bitiş Sayısı:<input type="text" id="bitis"> <br>
+    <button onclick="say()">Say</button>
+
+    
+</body>
+</html>
