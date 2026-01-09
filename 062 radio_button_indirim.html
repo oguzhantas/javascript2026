@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İndirim Hesaplama</title>
+    <style>
+        #indirimliFiyat{
+            background-color: rgb(108, 108, 227);
+            color:#FFF;
+            padding:5px;
+            width: 350px;
+            height: 25px;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="radio" name="indirim" id="on">%10 <br>
+    <input type="radio" name="indirim" id="yirmi">%20 <br>
+    <input type="radio" name="indirim" id="otuz">%30 <br>
+    
+     Fiyat: <input type="text" id="fiyat">
+     <button onclick="hesapla()">İndirimli Fiyatı Hesapla</button> <br>
+     <div id="indirimliFiyat"></div>
+
+     <script>
+        function hesapla(){
+            let sonfiyat=0;
+            f= parseFloat(document.getElementById("fiyat").value);
+            if (document.getElementById("on").checked){
+                sonfiyat= f-f*0.1; //f-f*10/100; 
+            }
+            else if (document.getElementById("yirmi").checked){
+                sonfiyat= f-f*0.2; //f-f*20/100; 
+            }
+            else if (document.getElementById("otuz").checked){
+                sonfiyat= f-f*0.3; //f-f*30/100; 
+            }
+            document.getElementById("indirimliFiyat").innerHTML = "İndirimli Fiyat:"+sonfiyat;
+        }
+
+     </script>
+</body>
+</html>

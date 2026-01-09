@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+    Sayı 1: <input type="text"  id="sayi1"> <br>
+    Sayı 2: <input type="text"  id="sayi2"> <br>
+
+    <input type="radio" id="toplam" name="islem">+ <br>
+    <input type="radio" id="cikarim" name="islem">-<br> 
+    <input type="radio" id="bolum" name="islem">/<br> 
+    <input type="radio" id="carpim" name="islem">*<br> 
+
+    <button onclick="hesapla()">Hesapla</button>
+    <script>
+        function hesapla(){
+          
+            let sonuc=0;
+            s1= parseFloat(document.getElementById('sayi1').value);
+            s2= parseFloat(document.getElementById('sayi2').value);
+            
+            if (document.getElementById('toplam').checked)
+              sonuc=s1+s2;
+
+            else if(document.getElementById('cikarim').checked)
+              sonuc=s1-s2;
+            
+            else if(document.getElementById('bolum').checked)
+             sonuc=s1/s2;
+
+            else if(document.getElementById('carpim').checked)
+             sonuc=s1*s2;
+             
+            alert('İşlem sonucu:'+sonuc);
+        }
+    </script>
+
+
+</body>
+</html>

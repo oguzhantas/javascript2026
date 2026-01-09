@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+</head>
+<body>
+
+    <input type="radio" id="rbmavi" name="renkRadio" onclick="zeminRengiDegistir('blue')">Mavi <br>
+    <input type="radio" id="rbkirmizi" name="renkRadio" onclick="zeminRengiDegistir('red')">Kirmizi <br>
+    <input type="radio" id="rbyesil" name="renkRadio" onclick="zeminRengiDegistir('green')">Yeşil <br>
+    <input type="radio" id="rbturuncu" name="renkRadio" onclick="zeminRengiDegistir('orange')">Turuncu <br>
+
+    <script>
+
+        function zeminRengiDegistir(renk){
+            
+            document.body.style.backgroundColor=renk;
+        }
+
+    </script>
+</body>
+</html>

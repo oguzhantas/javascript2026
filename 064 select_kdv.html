@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seçimi</title>
+</head>
+<body>
+   Fiyat:<input type="text" id="fiyat"> <br> <br>
+   KDV Oranı Seçiniz: <select id="kdvoran" onclick="hesapla()">
+        <option value="1">%1</option>
+        <option value="10">%10</option>
+        <option value="20" selected>%20</option>
+    </select> <br> <br>
+
+    Tutar:<input type="text" id="tutar"> <br>
+    
+    <script>
+        function hesapla(){
+            kdvoran=parseInt(document.getElementById('kdvoran').value);
+           // console.log(kdvoran);
+
+            f=parseFloat(document.getElementById('fiyat').value);
+          //  console.log(f);
+
+            t=f + f*kdvoran/100;
+          //  console.log(t);
+            document.getElementById('tutar').value=t;
+
+        }
+    </script>
+
+</body>
+</html>

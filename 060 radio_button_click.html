@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+</head>
+<body>
+
+    <input type="radio" id="rbmavi" name="renkRadio" onclick="zeminRengiDegistir()">Mavi <br>
+    <input type="radio" id="rbkirmizi" name="renkRadio" onclick="zeminRengiDegistir()">Kirmizi <br>
+    <input type="radio" id="rbyesil" name="renkRadio" onclick="zeminRengiDegistir()">Yeşil <br>
+    <input type="radio" id="rbturuncu" name="renkRadio" onclick="zeminRengiDegistir()">Turuncu <br>
+
+    <script>
+        function zeminRengiDegistir(){
+            
+            if (document.getElementById("rbmavi").checked)
+            {
+                document.body.style.backgroundColor="blue";
+            }
+            
+            else if (document.getElementById("rbkirmizi").checked)
+            {
+                document.body.style.backgroundColor="red";
+            }
+            else if (document.getElementById("rbyesil").checked)
+            {
+                document.body.style.backgroundColor="green";
+            }
+            else if (document.getElementById("rbturuncu").checked)
+            {
+                document.body.style.backgroundColor="orange";
+            }
+        }
+
+    </script>
+</body>
+</html>

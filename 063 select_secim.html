@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seçimi</title>
+</head>
+<body>
+   Sınıf Seçiniz: <select id="iller">
+        <option value="34">İstanbul</option>
+        <option value="35">İzmir</option>
+        <option value="23" selected>Elazığ</option>
+        <option value="06">Ankara</option>
+    </select>
+
+    <button onclick="ilsec()">Tamam</button>
+    
+    <script>
+        function ilsec(){
+            let x=document.getElementById('iller');
+            plaka = x.value;
+            il = x.options[x.selectedIndex].text;
+            alert("Seçilen:"+il+" "+plaka);
+        }
+    </script>
+
+</body>
+</html>
